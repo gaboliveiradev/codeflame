@@ -19,5 +19,11 @@ namespace codeflame.Helpers
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Red;
         }
+
+        public void setGray()
+        {
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Gray;
+        }
     }
 }
