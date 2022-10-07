@@ -40,7 +40,7 @@ namespace codeflame.Commands
             string[] folders = {
                 "App", "Database", 
                 @"App\Model", @"App\Controller", @"App\DAO", 
-                @"App\View\Modules", @"App\View\Includes"
+                @"App\View\Modules", @"App\View\Modules\Welcome", @"App\View\Includes\Bootstrap", @"App\View\CSS", @"App\Assets"
             };
 
             ct.setGray();
@@ -59,6 +59,38 @@ namespace codeflame.Commands
                 {
                     ct.setRed();
                     Console.WriteLine($"[X] Ocorreu um erro na criação da pasta {folder}.");                
+                }
+            }
+
+            createFilesInSubFolders();
+        }
+
+        public async void createFilesInSubFolders()
+        {
+            string[] files = {
+                @"App\index.php", @"App\rotas.php", @"App\config.php", @"App\autoload.php",
+                @"App\Controller\Controller.php", @"App\Model\Model.php", @"App\DAO\DAO.php",
+                @"App\View\Includes\Bootstrap\css_config.php", @"App\View\Includes\Bootstrap\js_config.php", @"App\View\Includes\header.php",
+                @"App\View\Modules\Welcome\Welcome.php",
+            };
+
+            ct.setGray();
+            Console.WriteLine();
+            Console.WriteLine("-> Criando Arquivos Necessários...");
+            Console.WriteLine();
+            await Task.Delay(3000);
+
+            foreach (string file in files)
+            {
+                try
+                {
+                    File.Create(dirRootFolder + file);
+                    ct.setGray();
+                    Console.WriteLine($"[V] Arquivo [{file}] criado com sucesso.");
+                } catch (Exception)
+                {
+                    ct.setRed();
+                    Console.WriteLine($"[X] Ocorreu um erro na criação do arquivo {file}.");
                 }
             }
         }
