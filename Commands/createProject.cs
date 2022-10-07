@@ -19,11 +19,12 @@ namespace codeflame.Commands
             {
                 Directory.CreateDirectory(dirRootFolder);
 
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"[V] Pasta do projeto {nameProject} criada com sucesso no diretório \"{dirRootFolder}\".");
+                ct.setGreen();
+                Console.WriteLine($"[V] Pasta do projeto \"{nameProject}\" criada com sucesso. Diretório: \"{dirRootFolder}\".");
             }
             else
             {
+                ct.setRed();
                 Console.WriteLine("[X] Nome de projeto existente, porfavor escolha outro.");
             }
         }

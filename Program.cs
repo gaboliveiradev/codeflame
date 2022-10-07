@@ -18,6 +18,9 @@ namespace codeflame
                 case "create-project":
                     string dirRootFolder = @"C:\codeflame\projects\" + args[1];
                     string nameProject = args[1];
+
+                    CreateProject cp = new CreateProject();
+                    cp.createRootFolder(dirRootFolder, nameProject);
                 break;
             }
 
