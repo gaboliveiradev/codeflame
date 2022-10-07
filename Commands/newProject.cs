@@ -8,5 +8,10 @@ namespace codeflame.Commands
 {
     public class newProject
     {
+
+        public void create(string nameProject)
+        {
+
+        }
     }
 }
