@@ -34,7 +34,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -52,7 +52,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -71,7 +71,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -97,7 +97,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -125,7 +125,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -144,7 +144,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -162,7 +162,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -186,7 +186,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -198,7 +198,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -210,7 +210,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -221,7 +221,7 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
 
@@ -266,11 +266,10 @@ namespace codeflame.Helpers
 
                     sw.Close();
 
-                    ct.setGray();
+                    ct.setDarkCyan();
                     Console.WriteLine($"[V] - Arquivo [{file}] criado e buildado com sucesso.");
                     break;
             }
-
         }
     }
 }

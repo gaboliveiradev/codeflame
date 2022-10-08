@@ -25,5 +25,35 @@ namespace codeflame.Helpers
             Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Gray;
         }
+
+        public void setDarkYellow()
+        {
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+        }
+
+        public void setYellow()
+        {
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+        }
+
+        public void setBlue()
+        {
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Blue;
+        }
+
+        public void setCyan()
+        {
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+        }
+
+        public void setDarkCyan()
+        {
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+        }
     }
 }
