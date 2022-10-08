@@ -10,13 +10,5 @@ namespace codeflame.Helpers
     public class WriteFiles
     {
         ColorText ct = new ColorText();
-
-        public void writeFiles(string host, string port, string user, string pass, string dbname)
-        {
-            ct.setGray();
-            Console.WriteLine();
-            Console.WriteLine("-> Buildando o arquivo [index.php]...");
-            Console.WriteLine();
-        }
     }
 }

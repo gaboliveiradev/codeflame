@@ -13,21 +13,11 @@ namespace codeflame.Commands
     {
         ColorText ct = new ColorText();
         public string dirRootFolder;
-
-        public string host;
-        public string port;
-        public string user;
-        public string pass;
-        public string dbname;
-
+        public string[] infoConnection = new string[5];
         public void createRootFolder(string dirRootFolder, string nameProject, string[] infoConnection)
         {
             this.dirRootFolder = dirRootFolder;
-            this.host = infoConnection[0];
-            this.port = infoConnection[1];
-            this.user = infoConnection[2];
-            this.pass = infoConnection[3];
-            this.dbname = infoConnection[4];
+            for(int i = 0; i < infoConnection.Length; i++) this.infoConnection[i] = infoConnection[i];
 
             if (!Directory.Exists(dirRootFolder))
             {
@@ -106,7 +96,7 @@ namespace codeflame.Commands
             }
 
             WriteFiles wf = new WriteFiles();
-            wf.writeFiles(this.host, this.port, this.user, this.pass, this.dbname);
+            //wf.writeFiles(this.infoConnection);
         }
     }
 }
