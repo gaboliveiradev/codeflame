@@ -104,6 +104,9 @@ namespace codeflame.Commands
                     Console.WriteLine($"[X] Ocorreu um erro na criação do arquivo {file}.");
                 }
             }
+
+            WriteFiles wf = new WriteFiles();
+            wf.writeFiles(this.host, this.port, this.user, this.pass, this.dbname);
         }
     }
 }
