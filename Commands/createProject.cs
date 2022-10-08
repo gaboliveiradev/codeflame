@@ -14,9 +14,20 @@ namespace codeflame.Commands
         ColorText ct = new ColorText();
         public string dirRootFolder;
 
-        public void createRootFolder(string dirRootFolder, string nameProject)
+        public string host;
+        public string port;
+        public string user;
+        public string pass;
+        public string dbname;
+
+        public void createRootFolder(string dirRootFolder, string nameProject, string[] infoConnection)
         {
             this.dirRootFolder = dirRootFolder;
+            this.host = infoConnection[0];
+            this.port = infoConnection[1];
+            this.user = infoConnection[2];
+            this.pass = infoConnection[3];
+            this.dbname = infoConnection[4];
 
             if (!Directory.Exists(dirRootFolder))
             {

@@ -20,14 +20,17 @@ namespace codeflame
                     string dirRootFolder = @"C:\codeflame\projects\" + args[1] + @"\";
                     string nameProject = args[1];
 
-                    string host = (args.Length > 2) ? args[2].Substring(7, args[2].Length - 7) : "localhost";
-                    string port = (args.Length > 3) ? args[3].Substring(7, args[3].Length - 7) : "3306";
-                    string user = (args.Length > 4) ? args[4].Substring(7, args[4].Length - 7) : "codeflame";
-                    string pass = (args.Length > 5) ? args[5].Substring(7, args[5].Length - 7) : "codeflamepw";
-                    string dbname = (args.Length > 6) ? args[6].Substring(9, args[6].Length - 9) : "codeflamedb";
+                    string[] infoConnection = new string[]
+                    {
+                        (args.Length > 2) ? args[2].Substring(7, args[2].Length - 7) : "localhost",
+                        (args.Length > 3) ? args[3].Substring(7, args[3].Length - 7) : "3306",
+                        (args.Length > 4) ? args[4].Substring(7, args[4].Length - 7) : "codeflame",
+                        (args.Length > 5) ? args[5].Substring(7, args[5].Length - 7) : "codeflamepw",
+                        (args.Length > 6) ? args[6].Substring(9, args[6].Length - 9) : "codeflamedb"
+                    };
 
                     CreateProject cp = new CreateProject();
-                    cp.createRootFolder(dirRootFolder, nameProject);
+                    cp.createRootFolder(dirRootFolder, nameProject, infoConnection);
                 break;
             }
 
