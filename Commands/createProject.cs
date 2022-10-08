@@ -13,9 +13,11 @@ namespace codeflame.Commands
     {
         ColorText ct = new ColorText();
         public string dirRootFolder;
+        public string[] infoConnection = new string[5];
         public void createRootFolder(string dirRootFolder, string nameProject, string[] infoConnection)
         {
             this.dirRootFolder = dirRootFolder;
+            for (int i = 0; i < infoConnection.Length; i++) this.infoConnection[i] = infoConnection[i];
 
             if (!Directory.Exists(dirRootFolder))
             {
@@ -53,7 +55,7 @@ namespace codeflame.Commands
                 {
                     Directory.CreateDirectory(dirRootFolder + folder);
                     ct.setGray();
-                    Console.WriteLine($"[V] Pasta [{folder}] criada com sucesso.");
+                    Console.WriteLine($"[V] - Pasta [{folder}] criada com sucesso.");
                 } catch (Exception)
                 {
                     ct.setRed();
@@ -79,19 +81,18 @@ namespace codeflame.Commands
             Console.WriteLine();
             await Task.Delay(3000);
 
-            /*foreach (string file in files)
+            foreach (string file in files)
             {
                 try
                 {
-                    File.Create(dirRootFolder + file);
-                    ct.setGray();
-                    Console.WriteLine($"[V] Arquivo [{file}] criado com sucesso.");
+                    WriteFile wf = new WriteFile();
+                    wf.createAndWriteFile(dirRootFolder, file);
                 } catch (Exception)
                 {
                     ct.setRed();
-                    Console.WriteLine($"[X] Ocorreu um erro na criação do arquivo {file}.");
+                    Console.WriteLine($"[X] Ocorreu um erro na criação e build do arquivo {file}.");
                 }
-            }*/
+            }
         }
     }
 }
