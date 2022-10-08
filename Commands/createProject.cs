@@ -40,7 +40,7 @@ namespace codeflame.Commands
             string[] folders = {
                 "App", "Database", 
                 @"App\Model", @"App\Controller", @"App\DAO", 
-                @"App\View\Modules", @"App\View\Modules\Welcome", @"App\View\Includes\Bootstrap", @"App\View\CSS", @"App\Assets"
+                @"App\View\Modules", @"App\View\Modules\Welcome", @"App\View\Includes\Bootstrap", @"App\View\CSS", @"App\View\Assets"
             };
 
             ct.setGray();
