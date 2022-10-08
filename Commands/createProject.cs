@@ -70,7 +70,7 @@ namespace codeflame.Commands
         {
             string[] files = {
                 @"App\index.php", @"App\rotas.php", @"App\config.php", @"App\autoload.php",
-                @"App\Controller\Controller.php", @"App\Model\Model.php", @"App\DAO\DAO.php",
+                @"App\Controller\Controller.php", @"App\Controller\WelcomeController.php", @"App\Model\Model.php", @"App\DAO\DAO.php",
                 @"App\View\Includes\Bootstrap\css_config.php", @"App\View\Includes\Bootstrap\js_config.php", @"App\View\Includes\header.php",
                 @"App\View\Modules\Welcome\Welcome.php",
             };
@@ -86,7 +86,7 @@ namespace codeflame.Commands
                 try
                 {
                     WriteFile wf = new WriteFile();
-                    wf.createAndWriteFile(dirRootFolder, file);
+                    wf.createAndWriteFile(dirRootFolder, file, infoConnection);
                 } catch (Exception)
                 {
                     ct.setRed();
