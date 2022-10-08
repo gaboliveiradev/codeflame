@@ -13,11 +13,9 @@ namespace codeflame.Commands
     {
         ColorText ct = new ColorText();
         public string dirRootFolder;
-        //public string[] infoConnection = new string[5];
         public void createRootFolder(string dirRootFolder, string nameProject, string[] infoConnection)
         {
             this.dirRootFolder = dirRootFolder;
-            //for(int i = 0; i < infoConnection.Length; i++) this.infoConnection[i] = infoConnection[i];
 
             if (!Directory.Exists(dirRootFolder))
             {
@@ -63,10 +61,10 @@ namespace codeflame.Commands
                 }
             }
 
-            createFilesInSubFolders();
+            createAndWriteFilesInSubFolders();
         }
 
-        public async void createFilesInSubFolders()
+        public async void createAndWriteFilesInSubFolders()
         {
             string[] files = {
                 @"App\index.php", @"App\rotas.php", @"App\config.php", @"App\autoload.php",
@@ -81,7 +79,7 @@ namespace codeflame.Commands
             Console.WriteLine();
             await Task.Delay(3000);
 
-            foreach (string file in files)
+            /*foreach (string file in files)
             {
                 try
                 {
@@ -93,7 +91,7 @@ namespace codeflame.Commands
                     ct.setRed();
                     Console.WriteLine($"[X] Ocorreu um erro na criação do arquivo {file}.");
                 }
-            }
+            }*/
         }
     }
 }
