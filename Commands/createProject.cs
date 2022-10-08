@@ -13,11 +13,11 @@ namespace codeflame.Commands
     {
         ColorText ct = new ColorText();
         public string dirRootFolder;
-        public string[] infoConnection = new string[5];
+        //public string[] infoConnection = new string[5];
         public void createRootFolder(string dirRootFolder, string nameProject, string[] infoConnection)
         {
             this.dirRootFolder = dirRootFolder;
-            for(int i = 0; i < infoConnection.Length; i++) this.infoConnection[i] = infoConnection[i];
+            //for(int i = 0; i < infoConnection.Length; i++) this.infoConnection[i] = infoConnection[i];
 
             if (!Directory.Exists(dirRootFolder))
             {
@@ -94,9 +94,6 @@ namespace codeflame.Commands
                     Console.WriteLine($"[X] Ocorreu um erro na criação do arquivo {file}.");
                 }
             }
-
-            WriteFiles wf = new WriteFiles();
-            //wf.writeFiles(this.infoConnection);
         }
     }
 }
