@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 using codeflame.Helpers;
@@ -44,9 +41,9 @@ namespace codeflame.Commands
             else
             {
                 ct.setRed();
-                Console.WriteLine("[X] Nome de projeto existente, porfavor escolha outro.");
+                Console.WriteLine($"[X] Este nome de projeto [{nameProject}] já existe, porfavor escolha outro.");
                 Console.WriteLine(">>> Pressione qualquer tecla para continuar...");
-                Console.WriteLine();
+                ct.setGray();
             }
         }
 
@@ -75,6 +72,7 @@ namespace codeflame.Commands
                     ct.setRed();
                     Console.WriteLine($"[X] Ocorreu um erro na criação da pasta {folder}.");
                     Console.WriteLine(">>> Pressione qualquer tecla para continuar...");
+                    ct.setGray();
                 }
             }
 
@@ -107,22 +105,18 @@ namespace codeflame.Commands
                     ct.setRed();
                     Console.WriteLine($"[X] Ocorreu um erro na criação e build do arquivo {file}.");
                     Console.WriteLine(">>> Pressione qualquer tecla para continuar...");
+                    ct.setGray();
                 }
             }
 
+            OpenProject op = new OpenProject();
+
             Console.WriteLine("");
-            ct.setGreen();
+            ct.setDarkYellow();
             Console.WriteLine("[->] - Projeto Criado com Sucesso!");
             Console.WriteLine($"[->] - Diretório do Projeto: {dirRootFolder}");
             Console.WriteLine("");
-            ct.setDarkYellow();
-            Console.WriteLine("-> Dados de Conexão com o Banco de Dados <-");
-            Console.WriteLine("-> Atenção: Para alterar esses dados acesse " + dirRootFolder + @"App\config.php");
-            ct.setYellow();
-            Console.WriteLine($"-> Host: {infoConnection[0]}");
-            Console.WriteLine($"-> Port: {infoConnection[1]}");
-            Console.WriteLine($"-> User: {infoConnection[2]}");
-            Console.WriteLine($"-> pass: {infoConnection[3]}");
+            op.openProject(dirRootFolder);
         }
     }
 }
