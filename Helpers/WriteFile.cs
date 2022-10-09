@@ -257,7 +257,7 @@ namespace codeflame.Helpers
                     sw.WriteLine("        <hr class=\"my-4\">");
                     sw.WriteLine("        <p><b>CodeFlame</b> é um framework que com apenas um comando te entrega toda a estrutura do padrão de <b>Projeto MVC.</b> Não perca mais tempo criando a estrutura básica do seu projeto, desde as estruturas de pastas até a build de cada arquivo essêncial. O CodeFlame é um framework que se encontra na sua versão <b>1.0.0</b>. Em breve pensamos em adicionar mais funcionalidades que <b>facilite</b> sua vida como <b>programador :)</b> <br><br> <b>Atenção:</b> Recomendamos utilizar o CodeFlame caso você já saiba e entenda a linguagem PHP e o padrão de projeto MVC.</p>");
                     sw.WriteLine("        <p class=\"lead\">");
-                    sw.WriteLine("            <a class=\"btn btn-sucess btn-lg\" href=\"https://github.com/gaboliveiradev/codeflame\" role=\"button\">Github Repository</a>");
+                    sw.WriteLine("            <a class=\"btn btn-sucess btn-lg\" href=\"https://github.com/gaboliveiradev\" role=\"button\">Github Repository</a>");
                     sw.WriteLine("        </p>");
                     sw.WriteLine("    </div>");
                     sw.WriteLine("<?php include \"./View/Includes/Bootstrap/js_config.php\" ?>");
