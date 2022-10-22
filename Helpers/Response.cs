@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace codeflame.Helpers
 {
-    abstract class Response
+    abstract class ResponseError
     {
-        protected void sendMessage(string prefix, string msg, bool b)
+        protected void sendMessage(string prefix, string msg)
         {
-            string color = (b) ? "DarkGreen" : "DarkRed";
             SetColor c = new SetColor();
-            c.setColor(color);
+            c.setColor("Red");
 
             Console.WriteLine($"{prefix} {msg}");
 
@@ -21,19 +20,32 @@ namespace codeflame.Helpers
         }
     }
 
-    internal class existingProject : Response
+    abstract class ResponseSuccess
     {
-        public existingProject(string prefix, string msg, bool b)
+        protected void sendMessage(string prefix, string msg)
         {
-            base.sendMessage(prefix, msg, b);
+            SetColor c = new SetColor();
+            c.setColor("DarkGreen");
+
+            Console.WriteLine($"{prefix} {msg}");
+
+            c.resetColor();
         }
     }
 
-    internal class projectCreated : Response
+    internal class existingProject : ResponseError
     {
-        public projectCreated(string prefix, string msg, bool b)
+        public existingProject(string prefix, string msg)
         {
-            base.sendMessage(prefix, msg, b);
+            base.sendMessage(prefix, msg);
+        }
+    }
+
+    internal class projectCreated : ResponseSuccess
+    {
+        public projectCreated(string prefix, string msg)
+        {
+            base.sendMessage(prefix, msg);
         }
     }
 }
