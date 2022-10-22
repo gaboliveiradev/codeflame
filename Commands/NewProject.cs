@@ -20,19 +20,24 @@ namespace codeflame.Commands
             this.rootDirectory = rootDirectory;
             this.projectName = projectName;
 
-            if (Directory.Exists(rootDirectory))
+            try
+            {
+                if (Directory.Exists(rootDirectory))
+                {
+                    Error err = new Error();
+                    new existingProject(err.prefix, err.msg_existing_project.Replace("CODEFLAME_NAME_PROJECT", projectName));
+                }
+                else
+                {
+                    Directory.CreateDirectory($"{rootDirectory}");
+
+                    Success succ = new Success();
+                    new projectCreated(succ.prefix, succ.msg_project_created.Replace("CODEFLAME_ROOT_DIR", rootDirectory));
+                }
+            } catch
             {
                 Error err = new Error();
-                
-                new existingProject(err.prefix, err.msg_existing_project.Replace("CODEFLAME_NAME_PROJECT", projectName), false);
-
-                return;
-            } else
-            {
-                Directory.CreateDirectory($"{rootDirectory}");
-
-                Success succ = new Success();
-                new projectCreated(succ.prefix, succ.msg_project_created.Replace("CODEFLAME_ROOT_DIR", rootDirectory), true);
+                new createProjectFail(err.prefix, err.msg_create_project_fail.Replace("CODEFLAME_NAME_PROJECT", projectName));
             }
         }
     }
