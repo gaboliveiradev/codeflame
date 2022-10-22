@@ -43,10 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\CreateProject.cs" />
-    <Compile Include="Helpers\ColorText.cs" />
-    <Compile Include="Helpers\OpenProject.cs" />
-    <Compile Include="Helpers\WriteFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
