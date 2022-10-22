@@ -16,9 +16,12 @@ namespace codeflame
             switch (args[0])
             {
                 case "new-project":
-                    string dirRootFolder = @"C:\codeflame\projects\" + args[1] + @"\";
-                    string nameProject = args[1];
+                    NewProject newProject = new NewProject();
 
+                    string projectName = args[1];
+                    string rootDirectory = @"C:\codeflame\projects\" + projectName + @"\";
+
+                    newProject.createRootDirectory(projectName, rootDirectory);
                 break;
             }
 
