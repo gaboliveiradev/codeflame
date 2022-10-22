@@ -41,6 +41,14 @@ namespace codeflame.Helpers
         }
     }
 
+    internal class createProjectFail : ResponseError
+    {
+        public createProjectFail(string prefix, string msg)
+        {
+            base.sendMessage(prefix, msg);
+        }
+    }
+
     internal class projectCreated : ResponseSuccess
     {
         public projectCreated(string prefix, string msg)

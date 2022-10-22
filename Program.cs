@@ -19,7 +19,7 @@ namespace codeflame
                     NewProject newProject = new NewProject();
 
                     string projectName = args[1];
-                    string rootDirectory = @"C:\codeflame\projects\" + projectName + @"\";
+                    string rootDirectory = @"C:\codeflame\projects\" + projectName + @"\App";
 
                     newProject.createRootDirectory(projectName, rootDirectory);
                 break;
