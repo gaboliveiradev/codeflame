@@ -33,6 +33,8 @@ namespace codeflame.Helpers
         }
     }
 
+    // ====================== Mensagens de Erros ======================
+
     internal class existingProject : ResponseError
     {
         public existingProject(string prefix, string msg)
@@ -49,9 +51,27 @@ namespace codeflame.Helpers
         }
     }
 
+    // ====================== Mensagens de Sucesso ======================
+
     internal class projectCreated : ResponseSuccess
     {
         public projectCreated(string prefix, string msg)
+        {
+            base.sendMessage(prefix, msg);
+        }
+    }
+
+    internal class fileTransferStarted : ResponseSuccess
+    {
+        public fileTransferStarted(string prefix, string msg)
+        {
+            base.sendMessage(prefix, msg);
+        }
+    }
+
+    internal class copiedFile : ResponseSuccess
+    {
+        public copiedFile(string prefix, string msg)
         {
             base.sendMessage(prefix, msg);
         }

@@ -11,5 +11,7 @@ namespace codeflame.Response
         public string prefix = "[V]";
 
         public string msg_project_created = "Pasta raiz do projeto criada com sucesso. Acesse [CODEFLAME_ROOT_DIR].";
+        public string msg_file_transfer_started = "Iniciando a transferência de arquivos base do projeto...";
+        public string msg_copied_file = "Arquivo [CODEFLAME_FILE] copiado com sucesso para o diretório do projeto.";
     }
 }
