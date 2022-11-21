@@ -50,7 +50,16 @@ namespace codeflame.Commands
 
                 foreach(string f in rootFiles)
                 {
-                    //File.Copy(@"MVC\" + f, $"{this.rootDirectory}", true);
+                    string caminho = string.Format(
+                        @"{0}{1}",
+                        AppDomain.CurrentDomain.BaseDirectory,
+                        @"Templates\MVC\" + f
+                    );
+
+                    //Console.WriteLine(caminho);
+                    //Console.WriteLine(this.rootDirectory);
+
+                    File.Copy(caminho, $"{this.rootDirectory}" + @"\" + f, true);
                     new copiedFile(succ.prefix, succ.msg_copied_file.Replace("CODEFLAME_FILE", f));
                 } 
             } catch (Exception e)
