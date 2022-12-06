@@ -49,11 +49,19 @@ namespace codeflame.Commands
                 string baseDirectory = Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory.ToString());
 
                 new fileTransferStarted(succ.prefix, succ.msg_file_transfer_started);
-                Console.WriteLine("");
 
-                foreach (string f in rootFiles)
+                foreach(string f in rootFiles)
                 {
-                    
+                    string caminho = string.Format(
+                        @"{0}{1}",
+                        AppDomain.CurrentDomain.BaseDirectory,
+                        @"Templates\MVC\" + f
+                    );
+
+                    //Console.WriteLine(caminho);
+                    //Console.WriteLine(this.rootDirectory);
+
+                    File.Copy(caminho, $"{this.rootDirectory}" + @"\" + f, true);
                     new copiedFile(succ.prefix, succ.msg_copied_file.Replace("CODEFLAME_FILE", f));
 
                 }
