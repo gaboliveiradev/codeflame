@@ -55,6 +55,7 @@ namespace codeflame.Commands
                 {
                     File.Copy(baseDirectory + @"Templates\MVC\" + f, $"{this.rootDirectory}" + @"\" + f, true);
                     new copiedFile(succ.prefix, succ.msg_copied_file.Replace("CODEFLAME_FILE", f));
+
                 }
             } catch (Exception e)
             {
