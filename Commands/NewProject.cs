@@ -32,6 +32,7 @@ namespace codeflame.Commands
                 {
                     Directory.CreateDirectory($"{rootDirectory}");
                     new projectCreated(succ.prefix, succ.msg_project_created.Replace("CODEFLAME_ROOT_DIR", rootDirectory));
+                    
                     copyRootFiles();
                 }
             } catch
@@ -44,15 +45,17 @@ namespace codeflame.Commands
         {
             try
             {
-                new fileTransferStarted(succ.prefix, succ.msg_file_transfer_started);
-                
                 string[] rootFiles = { "autoload.php", "config.php", "index.php", "rotas.php" };
+                string baseDirectory = Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory.ToString());
 
-                foreach(string f in rootFiles)
+                new fileTransferStarted(succ.prefix, succ.msg_file_transfer_started);
+                Console.WriteLine("");
+
+                foreach (string f in rootFiles)
                 {
-                    //File.Copy(@"MVC\" + f, $"{this.rootDirectory}", true);
+                    File.Copy(baseDirectory + @"Templates\MVC\" + f, $"{this.rootDirectory}" + @"\" + f, true);
                     new copiedFile(succ.prefix, succ.msg_copied_file.Replace("CODEFLAME_FILE", f));
-                } 
+                }
             } catch (Exception e)
             {
                 Console.WriteLine(e);
