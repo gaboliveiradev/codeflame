@@ -16,6 +16,7 @@ namespace codeflame.Commands
         Error err = new Error();
         Success succ = new Success();
         public string rootDirectory, projectName;
+        string baseDirectory = Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory.ToString());
 
         public void createRootDirectory(string projectName, string rootDirectory)
         {
@@ -33,7 +34,7 @@ namespace codeflame.Commands
                     Directory.CreateDirectory($"{rootDirectory}");
                     new projectCreated(succ.prefix, succ.msg_project_created.Replace("CODEFLAME_ROOT_DIR", rootDirectory));
                     
-                    copyRootFiles();
+                    copyFiles();
                 }
             } catch
             {
@@ -41,21 +42,28 @@ namespace codeflame.Commands
             }
         }
 
-        public void copyRootFiles()
+        public void copyFiles()
         {
             try
             {
-                string[] rootFiles = { "autoload.php", "config.php", "index.php", "rotas.php" };
-                string baseDirectory = Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory.ToString());
+                string[] rootFiles = Directory.GetFiles(this.baseDirectory + @"Templates\MVC\");
 
+                Console.WriteLine("");
                 new fileTransferStarted(succ.prefix, succ.msg_file_transfer_started);
                 Console.WriteLine("");
 
-                foreach (string f in rootFiles)
+                string[] arquivos = Directory.GetFiles(this.baseDirectory + @"Templates\MVC\View\bootstrap\css");
+
+                foreach(string a in arquivos)
                 {
-                    File.Copy(baseDirectory + @"Templates\MVC" + f, $"{this.rootDirectory}" + @"\" + f, true);
-                    new copiedFile(succ.prefix, succ.msg_copied_file.Replace("CODEFLAME_FILE", f));
+                    Console.WriteLine(a);
                 }
+
+                /*foreach (string f in rootFiles)
+                {
+                    File.Copy(this.baseDirectory + @"Templates\MVC\" + f, $"{this.rootDirectory}" + @"\" + f, true);
+                    new copiedFile(succ.prefix, succ.msg_copied_file.Replace("CODEFLAME_FILE", f));
+                }*/
             }
             catch (Exception e)
             {

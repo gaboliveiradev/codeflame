@@ -140,13 +140,18 @@
     <EmbeddedResource Include="Templates\MVC\View\bootstrap\js\bootstrap.min.js.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Templates\MVC\View\modules\welcome\welcome.php">
+    <EmbeddedResource Include="Templates\MVC\View\modules\welcome\index.view.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="Templates\MVC\View\css\welcome\index.style.css" />
+    <None Include="Templates\MVC\Controller\WelcomeController.php" />
+    <None Include="Templates\MVC\View\includes\css_config.php" />
+    <None Include="Templates\MVC\View\includes\js_config.php" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Templates\MVC\View\css\" />
-    <Folder Include="Templates\MVC\View\includes\" />
+    <Folder Include="Templates\MVC\Migration\" />
+    <Folder Include="Templates\MVC\Provider\" />
+    <Folder Include="Templates\MVC\View\assets\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Templates\MVC\View\bootstrap\css\bootstrap-grid.css">

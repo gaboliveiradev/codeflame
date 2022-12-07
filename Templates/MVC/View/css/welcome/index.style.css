@@ -1,0 +1,32 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    width: 80vw;
+    height: 40vh;
+}
+
+.title {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 8em;
+    color: gray;
+}
+
+.title:hover .goldenrod {
+    color: goldenrod;
+}
+
+.links {
+    text-decoration: none;
+    color: rgb(97, 96, 96);
+}
+
+.links:hover {
+    color: goldenrod;
+}
