@@ -8,7 +8,7 @@
 
     <?php include "./View/includes/css_config.php" ?>
     <?php include "./View/includes/js_config.php" ?>
-    <link rel="stylesheet" href="./../../../View/css/welcome/index.css">
+    <link rel="stylesheet" href="./../../../View/css/welcome/index.style.css">
 </head>
 <body>
     <section class="">
