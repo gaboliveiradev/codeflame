@@ -33,7 +33,8 @@ namespace codeflame.Commands
                 {
                     Directory.CreateDirectory($"{rootDirectory}");
                     new projectCreated(succ.prefix, succ.msg_project_created.Replace("CODEFLAME_ROOT_DIR", rootDirectory));
-                    
+
+                    createFolders();
                     copyFiles();
                 }
             } catch
@@ -42,33 +43,27 @@ namespace codeflame.Commands
             }
         }
 
+        public void createFolders()
+        {
+            string[] folders = { 
+                @"\Controller", @"\DAO", @"\Model", @"\View", @"\View\assets", @"\View\bootstrap",
+                @"\View\bootstrap\css", @"\View\bootstrap\js", @"\View\css", @"\View\css\welcome", 
+                @"\View\includes", @"\View\modules\welcome", @"\Migration", @"\Provider",
+            };
+
+            foreach(string f in folders)
+            {
+                if(!Directory.Exists(f))
+                {
+                    Directory.CreateDirectory(this.rootDirectory + f);
+                }
+            }
+        }
+
         public void copyFiles()
         {
-            try
-            {
-                string[] rootFiles = Directory.GetFiles(this.baseDirectory + @"Templates\MVC\");
-
-                Console.WriteLine("");
-                new fileTransferStarted(succ.prefix, succ.msg_file_transfer_started);
-                Console.WriteLine("");
-
-                string[] arquivos = Directory.GetFiles(this.baseDirectory + @"Templates\MVC\View\bootstrap\css");
-
-                foreach(string a in arquivos)
-                {
-                    Console.WriteLine(a);
-                }
-
-                /*foreach (string f in rootFiles)
-                {
-                    File.Copy(this.baseDirectory + @"Templates\MVC\" + f, $"{this.rootDirectory}" + @"\" + f, true);
-                    new copiedFile(succ.prefix, succ.msg_copied_file.Replace("CODEFLAME_FILE", f));
-                }*/
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
+            CopyFile helper = new CopyFile();
+            helper.copyFiles(this.baseDirectory, this.rootDirectory);
         }
     }
 }

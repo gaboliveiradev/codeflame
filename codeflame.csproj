@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\NewProject.cs" />
+    <Compile Include="Helpers\CopyFile.cs" />
     <Compile Include="Helpers\Response.cs" />
     <Compile Include="Helpers\SetColor.cs" />
     <Compile Include="Program.cs" />
@@ -60,16 +61,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Templates\MVC\Controller\Controller.php">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Templates\MVC\DAO\DAO.php">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Templates\MVC\index.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Templates\MVC\Model\Model.php">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Templates\MVC\rotas.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -141,12 +142,20 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Templates\MVC\View\modules\welcome\index.view.php">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <Content Include="Templates\MVC\View\css\welcome\index.style.css" />
-    <None Include="Templates\MVC\Controller\WelcomeController.php" />
-    <None Include="Templates\MVC\View\includes\css_config.php" />
-    <None Include="Templates\MVC\View\includes\js_config.php" />
+    <EmbeddedResource Include="Templates\MVC\View\css\welcome\index.style.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\MVC\Controller\WelcomeController.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\MVC\View\includes\css_config.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\MVC\View\includes\js_config.php">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Templates\MVC\Migration\" />
