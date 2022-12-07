@@ -63,7 +63,7 @@ namespace codeflame.Commands
         public void copyFiles()
         {
             CopyFile helper = new CopyFile();
-            helper.copyFiles(this.baseDirectory, this.rootDirectory);
+            helper.copyFiles(this.baseDirectory, this.rootDirectory, "DarkCyan", "Cyan");
         }
     }
 }

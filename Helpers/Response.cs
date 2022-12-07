@@ -9,10 +9,10 @@ namespace codeflame.Helpers
 {
     abstract class ResponseError
     {
-        protected void sendMessage(string prefix, string msg)
+        protected void sendMessage(string prefix, string msg, string color = "Red")
         {
             SetColor c = new SetColor();
-            c.setColor("Red");
+            c.setColor(color);
 
             Console.WriteLine($"{prefix} {msg}");
 
@@ -22,10 +22,10 @@ namespace codeflame.Helpers
 
     abstract class ResponseSuccess
     {
-        protected void sendMessage(string prefix, string msg)
+        protected void sendMessage(string prefix, string msg, string color = "DarkGreen")
         {
             SetColor c = new SetColor();
-            c.setColor("DarkGreen");
+            c.setColor(color);
 
             Console.WriteLine($"{prefix} {msg}");
 
@@ -37,17 +37,17 @@ namespace codeflame.Helpers
 
     internal class existingProject : ResponseError
     {
-        public existingProject(string prefix, string msg)
+        public existingProject(string prefix, string msg, string color = "Red")
         {
-            base.sendMessage(prefix, msg);
+            base.sendMessage(prefix, msg, color);
         }
     }
 
     internal class createProjectFail : ResponseError
     {
-        public createProjectFail(string prefix, string msg)
+        public createProjectFail(string prefix, string msg, string color = "Red")
         {
-            base.sendMessage(prefix, msg);
+            base.sendMessage(prefix, msg, color);
         }
     }
 
@@ -55,25 +55,25 @@ namespace codeflame.Helpers
 
     internal class projectCreated : ResponseSuccess
     {
-        public projectCreated(string prefix, string msg)
+        public projectCreated(string prefix, string msg, string color = "DarkGreen")
         {
-            base.sendMessage(prefix, msg);
+            base.sendMessage(prefix, msg, color);
         }
     }
 
     internal class fileTransferStarted : ResponseSuccess
     {
-        public fileTransferStarted(string prefix, string msg)
+        public fileTransferStarted(string prefix, string msg, string color = "DarkGreen")
         {
-            base.sendMessage(prefix, msg);
+            base.sendMessage(prefix, msg, color);
         }
     }
 
     internal class copiedFile : ResponseSuccess
     {
-        public copiedFile(string prefix, string msg)
+        public copiedFile(string prefix, string msg, string color = "DarkGreen")
         {
-            base.sendMessage(prefix, msg);
+            base.sendMessage(prefix, msg, color);
         }
     }
 }
