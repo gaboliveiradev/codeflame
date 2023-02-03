@@ -1,4 +1,4 @@
-<?php
+﻿<?php
     spl_autoload_register(function ($class) {
         $arq = BASEDIR . '/' . $class . '.php';
 
