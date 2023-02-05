@@ -95,6 +95,9 @@ namespace codeflame.Helpers
                     File.Copy(baseDirectory + @"Templates\MVC\DAO\" + Path.GetFileName(f), $"{rootDirectory}" + @"\DAO\" + Path.GetFileName(f), true);
                     new copiedFile(succ.prefix, succ.msg_copied_file.Replace("CODEFLAME_FILE", Path.GetFileName(f)), colorMsg);
                 }
+
+                Console.WriteLine("");
+                new finnalyCopiedFiles(succ.prefix, succ.msg_finnaly_copied_files.Replace("CODEFLAME_ROOT_DIR", rootDirectory), "Yellow"); ;
             }
             catch (Exception e)
             {

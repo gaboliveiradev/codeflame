@@ -16,7 +16,7 @@ namespace codeflame
             switch (args[0])
             {
                 case "new-project":
-                    NewProject newProject = new NewProject();
+                    NewProject newProject = new NewProject(); 
 
                     string projectName = args[1];
                     string rootDirectory = @"C:\codeflame\projects\" + projectName + @"\App";

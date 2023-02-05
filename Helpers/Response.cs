@@ -61,6 +61,14 @@ namespace codeflame.Helpers
         }
     }
 
+    internal class finnalyCopiedFiles : ResponseSuccess
+    {
+        public finnalyCopiedFiles(string prefix, string msg, string color = "DarkGreen")
+        {
+            base.sendMessage(prefix, msg, color);
+        }
+    }
+
     internal class fileTransferStarted : ResponseSuccess
     {
         public fileTransferStarted(string prefix, string msg, string color = "DarkGreen")
