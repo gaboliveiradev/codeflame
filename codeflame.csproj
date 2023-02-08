@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\MakeLayer.cs" />
     <Compile Include="Commands\NewProject.cs" />
     <Compile Include="Helpers\CopyFile.cs" />
     <Compile Include="Helpers\Response.cs" />
@@ -158,6 +159,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Templates\Controller\" />
+    <Folder Include="Templates\DAO\" />
+    <Folder Include="Templates\Model\" />
     <Folder Include="Templates\MVC\Migration\" />
     <Folder Include="Templates\MVC\Provider\" />
     <Folder Include="Templates\MVC\View\assets\" />
