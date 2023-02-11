@@ -157,9 +157,9 @@
     <EmbeddedResource Include="Templates\MVC\View\includes\js_config.php">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Include="Templates\Controller\Controller.php" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Templates\Controller\" />
     <Folder Include="Templates\DAO\" />
     <Folder Include="Templates\Model\" />
     <Folder Include="Templates\MVC\Migration\" />

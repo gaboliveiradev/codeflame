@@ -18,25 +18,28 @@ namespace codeflame
 
             switch (args[0])
             {
-                case "new-project":
-                    string projectName = args[1];
+                // [Exemplo de CMD] codeflame add/project --name=EcommerceSite
+                case "add/project":
+                    string projectName = args[1].Remove(0, 7);
                     string rootDirectory = @"C:\codeflame\repos\" + projectName + @"\App";
 
                     newProject.createRootDirectory(projectName, rootDirectory);
                     break;
 
+                // [Exemplo de CMD] codeflame make:controller --controller=UsuarioController
                 case "make:controller":
                     string nameController = args[1];
                     makeLayer.createController(nameController);
                     break;
 
-
+                // [Exemplo de CMD] codeflame make:model --model=UsuarioModel
                 case "make:model":
                     string nameModel = args[1];
                     makeLayer.createModel(nameModel);
                     break;
 
 
+                // [Exemplo de CMD] codeflame make:dao --dao=UsuarioDAO
                 case "make:dao":
                     string nameDAO = args[1];
                     makeLayer.createDAO(nameDAO);
