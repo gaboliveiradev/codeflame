@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Commands\MakeLayer.cs" />
     <Compile Include="Commands\NewProject.cs" />
+    <Compile Include="Helpers\ChangeName.cs" />
     <Compile Include="Helpers\CopyFile.cs" />
     <Compile Include="Helpers\Response.cs" />
     <Compile Include="Helpers\SetColor.cs" />

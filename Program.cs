@@ -28,7 +28,7 @@ namespace codeflame
 
                 // [Exemplo de CMD] codeflame make:controller --controller=UsuarioController
                 case "make:controller":
-                    string nameController = args[1].Remove(0, 14);
+                    string nameController = args[1].Remove(0, 13);
                     makeLayer.createController(nameController);
                     break;
 
