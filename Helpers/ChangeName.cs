@@ -12,7 +12,7 @@ namespace codeflame.Helpers
     {
         public string c = "class NOME_CONTROLLER extends Controller {";
 
-        public void controller(string baseDirectory, string name)
+        public string[] controller(string baseDirectory, string name)
         {
             string line; var qtdRows = File.ReadLines(baseDirectory + @"Templates\Controller\Controller.php").Count();
             string[] rowsFile = new string[qtdRows]; int i = 0;
@@ -26,12 +26,8 @@ namespace codeflame.Helpers
             }
 
             rowsFile[3] = (rowsFile[3] == c) ? $"class {name} extends Controller {{" : "class NOME_CONTROLLER extends Controller {";
-            
-            foreach(string r in rowsFile)
-            {
-                Console.WriteLine(r);
-            }
 
+            return rowsFile;
         }
 
         public void model(string name) 

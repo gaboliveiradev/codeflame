@@ -16,6 +16,11 @@ namespace codeflame.Commands
         {
             ChangeName changeName = new ChangeName();
             changeName.controller(baseDirectory, nameController);
+
+            foreach (string r in changeName.controller(baseDirectory, nameController))
+            {
+                Console.WriteLine(r);
+            }
         }
 
         public void createModel(string nameModel)
