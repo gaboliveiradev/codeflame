@@ -153,7 +153,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_69B1038CD3F344CD99BC62207BEE6921"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6B06C0FEEBB74E0AAFBDD0955D3A92E1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6D4E1E0458174742AE62E1220A4ECF86"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -190,6 +202,12 @@
         "Entry"
         {
         "MsmKey" = "8:_7C3EFF51C4AA426F9E8CB85CC466897B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_812F859D9B594FDE9B636D7F3ACFD261"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -250,6 +268,12 @@
         "Entry"
         {
         "MsmKey" = "8:_B33DB9A61450441A8DEDE4A59D72FDA4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BB6F1BCD8F374769A3E9BDA00BA0BC5D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -339,6 +363,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_F0EE3278F13F4D839C4481AEB5BABD44"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F1C97EB2A0684E91AB544F4591993ECD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -358,6 +388,12 @@
         "Entry"
         {
         "MsmKey" = "8:_F6BCE2DE39164EC39CDAD8B7F7033DDA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FDE6093CDB524DCEBD3667AF159A5174"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -430,6 +466,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -931,12 +975,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_69B1038CD3F344CD99BC62207BEE6921"
+            {
+            "SourcePath" = "8:..\\..\\bin\\Debug\\Templates\\Controller\\Temporary.php"
+            "TargetName" = "8:Temporary.php"
+            "Tag" = "8:"
+            "Folder" = "8:_2C5F29698012447CB2E5FB8A43F57496"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B06C0FEEBB74E0AAFBDD0955D3A92E1"
             {
             "SourcePath" = "8:..\\..\\Templates\\MVC\\Controller\\Controller.php"
             "TargetName" = "8:Controller.php"
             "Tag" = "8:"
             "Folder" = "8:_3A86FFDEAC274B2192C89CFF3D986EB1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6D4E1E0458174742AE62E1220A4ECF86"
+            {
+            "SourcePath" = "8:..\\..\\bin\\Debug\\Templates\\Model\\Model.php"
+            "TargetName" = "8:Model.php"
+            "Tag" = "8:"
+            "Folder" = "8:_023AEC560E9F4AC48A94800AE1F2C20B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1057,6 +1141,26 @@
             "TargetName" = "8:bootstrap.min.js"
             "Tag" = "8:"
             "Folder" = "8:_7622081EC5C942BDAA6694C550A8F95E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_812F859D9B594FDE9B636D7F3ACFD261"
+            {
+            "SourcePath" = "8:..\\..\\bin\\Debug\\Templates\\Model\\Temporary.php"
+            "TargetName" = "8:Temporary.php"
+            "Tag" = "8:"
+            "Folder" = "8:_023AEC560E9F4AC48A94800AE1F2C20B"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1257,6 +1361,26 @@
             "TargetName" = "8:bootstrap-utilities.rtl.min.css"
             "Tag" = "8:"
             "Folder" = "8:_4C7E0DD273D34294B8236781D3837C8A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BB6F1BCD8F374769A3E9BDA00BA0BC5D"
+            {
+            "SourcePath" = "8:..\\..\\bin\\Debug\\Templates\\DAO\\Temporary.php"
+            "TargetName" = "8:Temporary.php"
+            "Tag" = "8:"
+            "Folder" = "8:_83B4B91C947D40B4B03046BF66FB6C94"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1531,6 +1655,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F0EE3278F13F4D839C4481AEB5BABD44"
+            {
+            "SourcePath" = "8:..\\..\\bin\\Debug\\Templates\\DAO\\DAO.php"
+            "TargetName" = "8:DAO.php"
+            "Tag" = "8:"
+            "Folder" = "8:_83B4B91C947D40B4B03046BF66FB6C94"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F1C97EB2A0684E91AB544F4591993ECD"
             {
             "SourcePath" = "8:..\\..\\Templates\\MVC\\autoload.php"
@@ -1597,6 +1741,26 @@
             "TargetName" = "8:js_config.php"
             "Tag" = "8:"
             "Folder" = "8:_690094A0F76145F69AFF0C895F3DF1F2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FDE6093CDB524DCEBD3667AF159A5174"
+            {
+            "SourcePath" = "8:..\\..\\bin\\Debug\\Templates\\Controller\\Controller.php"
+            "TargetName" = "8:Controller.php"
+            "Tag" = "8:"
+            "Folder" = "8:_2C5F29698012447CB2E5FB8A43F57496"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
