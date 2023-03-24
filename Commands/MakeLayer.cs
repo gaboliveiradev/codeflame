@@ -91,7 +91,39 @@ namespace codeflame.Commands
 
         public void createDAO(string nameDAO)
         {
+            ChangeName changeName = new ChangeName();
 
+            string dir_atual = Directory.GetCurrentDirectory();
+            string dir_projeto = dir_atual + @"\DAO\"; ;
+            string arquivo = dir_projeto + nameDAO + ".php";
+            string arquivo_temporario = baseDirectory + @"Templates\DAO\Temporary.php";
+
+            if (Directory.Exists(dir_projeto))
+            {
+                if (!File.Exists(arquivo))
+                {
+                    using (StreamWriter writer = new StreamWriter(arquivo_temporario))
+                    {
+                        foreach (string r in changeName.dao(nameDAO))
+                        {
+                            writer.WriteLine(r);
+                        }
+
+                        writer.Close();
+                    }
+
+                    File.Copy(arquivo_temporario, arquivo, true);
+                    new layersCreated(succ.prefix, succ.msg_created_layer.Replace("CODEFLAME_FILE", nameDAO).Replace("CODEFLAME_DIR", arquivo));
+                }
+                else
+                {
+                    new fileNameExists(err.prefix, err.msg_file_name_exists.Replace("CODEFLAME_LAYER", "dao").Replace("CODEFLAME_FILE_NAME", nameDAO));
+                }
+            }
+            else
+            {
+                new directoryNotFound(err.prefix, err.msg_directory_not_found.Replace("CODEFLAME_FOLDER", @"...\DAO"));
+            }
         }
     }
 }

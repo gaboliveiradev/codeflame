@@ -13,6 +13,7 @@ namespace codeflame.Helpers
         string baseDirectory = Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory.ToString());
         public string c = "class NOME_CONTROLLER extends Controller {";
         public string m = "class NOME_MODEL extends Model {";
+        public string d = "class NOME_DAO extends DAO {";
 
         public string[] controller(string name)
         {
@@ -50,9 +51,22 @@ namespace codeflame.Helpers
             return rowsFile;
         }
 
-        public void dao(string name) 
+        public string[] dao(string name) 
         {
-            
+            string line; var qtdRows = File.ReadLines(baseDirectory + @"Templates\DAO\DAO.php").Count();
+            string[] rowsFile = new string[qtdRows]; int i = 0;
+
+            StreamReader reader = new StreamReader(baseDirectory + @"Templates\DAO\DAO.php");
+
+            while ((line = reader.ReadLine()) != null)
+            {
+                rowsFile[i] = line;
+                i++;
+            }
+
+            rowsFile[5] = (rowsFile[5] == d) ? $"class {name} extends DAO {{" : "class NOME_DAO extends DAO {";
+
+            return rowsFile;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace codeflame
 
             switch (args[0])
             {
-                // [Exemplo de CMD] codeflame add/project EcommerceSite
+                // [Exemplo de CMD] codeflame add/project-mvc EcommerceSite
                 case "add/project-mvc":
                     string projectName = args[1];
                     string rootDirectory = @"C:\codeflame\repos\" + projectName + @"\App";

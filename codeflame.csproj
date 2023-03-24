@@ -170,9 +170,14 @@
     <EmbeddedResource Include="Templates\Model\Temporary.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Templates\DAO\DAO.php">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\DAO\Temporary.php">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Templates\DAO\" />
     <Folder Include="Templates\MVC\Migration\" />
     <Folder Include="Templates\MVC\Provider\" />
     <Folder Include="Templates\MVC\View\assets\" />
