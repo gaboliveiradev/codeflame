@@ -51,6 +51,22 @@ namespace codeflame.Helpers
         }
     }
 
+    internal class directoryNotFound : ResponseError
+    {
+        public directoryNotFound(string prefix, string msg, string color = "Red")
+        {
+            base.sendMessage(prefix, msg, color);
+        }
+    }
+
+    internal class fileNameExists : ResponseError
+    {
+        public fileNameExists(string prefix, string msg, string color = "Red")
+        {
+            base.sendMessage(prefix, msg, color);
+        }
+    }
+
     // ====================== Mensagens de Sucesso ======================
 
     internal class projectCreated : ResponseSuccess
@@ -80,6 +96,14 @@ namespace codeflame.Helpers
     internal class copiedFile : ResponseSuccess
     {
         public copiedFile(string prefix, string msg, string color = "DarkGreen")
+        {
+            base.sendMessage(prefix, msg, color);
+        }
+    }
+
+    internal class layersCreated : ResponseSuccess
+    {
+        public layersCreated(string prefix, string msg, string color = "DarkGreen")
         {
             base.sendMessage(prefix, msg, color);
         }

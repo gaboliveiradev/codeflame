@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -30,12 +31,18 @@ namespace codeflame
                 case "make:controller":
                     string nameController = args[1];
                     makeLayer.createController(nameController);
+
+                    Console.WriteLine("");
+                    Process.GetCurrentProcess().Kill();
                     break;
 
                 // [Exemplo de CMD] codeflame make:model UsuarioModel
                 case "make:model":
                     string nameModel = args[1];
                     makeLayer.createModel(nameModel);
+
+                    Console.WriteLine("");
+                    Process.GetCurrentProcess().Kill();
                     break;
 
 
@@ -43,6 +50,9 @@ namespace codeflame
                 case "make:dao":
                     string nameDAO = args[1];
                     makeLayer.createDAO(nameDAO);
+
+                    Console.WriteLine("");
+                    Process.GetCurrentProcess().Kill();
                     break;
             }
 

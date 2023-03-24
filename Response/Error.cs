@@ -10,7 +10,9 @@ namespace codeflame.Response
     {
         public string prefix = "[X]";
 
-        public string msg_existing_project = "Já existe um projeto com o nome \"CODEFLAME_NAME_PROJECT\", porfavor escolhar outro nome.";
-        public string msg_create_project_fail = "Ocorreu um erro inesperado ao tentar criar o projeto \"CODEFLAME_NAME_PROJECT\", porfavor tente novamente.";
+        public string msg_existing_project = "Já existe um projeto com o nome [CODEFLAME_NAME_PROJECT], porfavor escolhar outro nome.";
+        public string msg_create_project_fail = "Ocorreu um erro inesperado ao tentar criar o projeto [CODEFLAME_NAME_PROJECT], porfavor tente novamente.";
+        public string msg_directory_not_found = "Verificamos que você não possui a pasta [CODEFLAME_FOLDER], confira se está no diretório correto da aplicação.";
+        public string msg_file_name_exists = "Verificamos que você já possui um arquivo [CODEFLAME_LAYER] criado com este nome [CODEFLAME_FILE_NAME].";
     }
 }
