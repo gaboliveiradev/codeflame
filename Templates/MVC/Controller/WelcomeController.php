@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controller;
 
 class WelcomeController extends Controller {

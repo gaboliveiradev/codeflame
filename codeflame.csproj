@@ -164,10 +164,15 @@
     <EmbeddedResource Include="Templates\Controller\Temporary.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Model\Model.php">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\Model\Temporary.php">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Templates\DAO\" />
-    <Folder Include="Templates\Model\" />
     <Folder Include="Templates\MVC\Migration\" />
     <Folder Include="Templates\MVC\Provider\" />
     <Folder Include="Templates\MVC\View\assets\" />
