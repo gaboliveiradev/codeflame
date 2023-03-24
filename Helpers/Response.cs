@@ -67,6 +67,14 @@ namespace codeflame.Helpers
         }
     }
 
+    internal class cmdInvalid : ResponseError
+    {
+        public cmdInvalid(string prefix, string msg, string color = "Red")
+        {
+            base.sendMessage(prefix, msg, color);
+        }
+    }
+
     // ====================== Mensagens de Sucesso ======================
 
     internal class projectCreated : ResponseSuccess
