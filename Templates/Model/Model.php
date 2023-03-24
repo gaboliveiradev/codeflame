@@ -1,8 +1,7 @@
 ﻿<?php
 namespace App\Model;
 
-class NOME_MODEL extends Model 
-{
+class NOME_MODEL extends Model {
 	public $id;
 
 	public function save() 

@@ -19,7 +19,6 @@ namespace codeflame.Commands
         public void createController(string nameController)
         {
             ChangeName changeName = new ChangeName();
-            changeName.controller(baseDirectory, nameController);
 
             string dir_atual = Directory.GetCurrentDirectory();
             string dir_projeto = dir_atual + @"\Controller\"; ;
@@ -32,7 +31,7 @@ namespace codeflame.Commands
                 {
                     using (StreamWriter writer = new StreamWriter(arquivo_temporario))
                     {
-                        foreach (string r in changeName.controller(baseDirectory, nameController))
+                        foreach (string r in changeName.controller(nameController))
                         {
                             writer.WriteLine(r);
                         }
@@ -55,7 +54,39 @@ namespace codeflame.Commands
 
         public void createModel(string nameModel)
         {
+            ChangeName changeName = new ChangeName();
 
+            string dir_atual = Directory.GetCurrentDirectory();
+            string dir_projeto = dir_atual + @"\Model\"; ;
+            string arquivo = dir_projeto + nameModel + ".php";
+            string arquivo_temporario = baseDirectory + @"Templates\Model\Temporary.php";
+
+            if (Directory.Exists(dir_projeto))
+            {
+                if (!File.Exists(arquivo))
+                {
+                    using (StreamWriter writer = new StreamWriter(arquivo_temporario))
+                    {
+                        foreach (string r in changeName.model(nameModel))
+                        {
+                            writer.WriteLine(r);
+                        }
+
+                        writer.Close();
+                    }
+
+                    File.Copy(arquivo_temporario, arquivo, true);
+                    new layersCreated(succ.prefix, succ.msg_created_layer.Replace("CODEFLAME_FILE", nameModel).Replace("CODEFLAME_DIR", arquivo));
+                }
+                else
+                {
+                    new fileNameExists(err.prefix, err.msg_file_name_exists.Replace("CODEFLAME_LAYER", "model").Replace("CODEFLAME_FILE_NAME", nameModel));
+                }
+            }
+            else
+            {
+                new directoryNotFound(err.prefix, err.msg_directory_not_found.Replace("CODEFLAME_FOLDER", @"...\Model"));
+            }
         }
 
         public void createDAO(string nameDAO)

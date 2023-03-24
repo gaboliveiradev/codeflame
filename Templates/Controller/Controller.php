@@ -2,7 +2,6 @@
 namespace App\Controller;
 
 class NOME_CONTROLLER extends Controller {
-
 	public static function insert() 
 	{
 
