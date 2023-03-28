@@ -41,3 +41,11 @@ codeflame make:model NameOfModel
 ```
 codeflame make:dao NameOfDao
 ```
+
+# Future Updates:
+1. **Migration:** Create your database with just one click.
+2. **Providers:** Have utils methods to use in your project.
+
+<hr>
+
+Codeflame is constantly evolving. :)
