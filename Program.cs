@@ -68,11 +68,11 @@ namespace codeflame
                     Console.WriteLine("");
                     new SetColor().setColor("Magenta");
                     Console.WriteLine("");
-                    Console.WriteLine("codeflame add/project-mvc nome_projeto: Crie um projeto MVC em segundos.");
-                    Console.WriteLine("codeflame make:controller nome_controller: Crie um arquivo controller com todos os metodos pre-setados.");
-                    Console.WriteLine("codeflame make:model nome_model: Crie um arquivo model com todos os metodos pre-setados.");
-                    Console.WriteLine("codeflame make:dao nome_dao: Crie um arquivo dao com todos os metodos pre-setados.");
-                    Console.WriteLine("codeflame list: Liste todos os comandos disponíveis no codeflame.");
+                    Console.WriteLine("codeflame add/project-mvc nome_projeto = Crie um projeto MVC em segundos.");
+                    Console.WriteLine("codeflame make:controller nome_controller = Crie um arquivo controller com todos os metodos pre-setados.");
+                    Console.WriteLine("codeflame make:model nome_model = Crie um arquivo model com todos os metodos pre-setados.");
+                    Console.WriteLine("codeflame make:dao nome_dao = Crie um arquivo dao com todos os metodos pre-setados.");
+                    Console.WriteLine("codeflame list = Liste todos os comandos disponíveis no codeflame.");
                     new SetColor().resetColor();
 
                     killProcess();
