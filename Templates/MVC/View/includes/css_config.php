@@ -1,4 +1,4 @@
-﻿<!--
+<!--
     Este é um arquivo responsável por armazenar itens relacionados ao css da
     sua aplicação, seja ele links de frameworks e muito mais.
 -->
