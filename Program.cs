@@ -27,18 +27,32 @@ namespace codeflame
             MakeLayer makeLayer = new MakeLayer();
             Error err = new Error();
 
+            string projectName = "";
+            string rootDirectory = "";
+
             switch (args[0])
             {
-                // [Exemplo de CMD] codeflame add/project-mvc EcommerceSite
+                // [Exemplo de CMD] codeflame add/project-mvc EcommerceSite || cf add/project-mvc EcommerceSite
+                // [Exemplo de CMD] codeflame add/mvc EcommerceSite || cf add/mvc EcommerceSite
+                // [Exemplo de CMD] codeflame mvc EcommerceSite || cf mvc EcommerceSite
                 case "add/project-mvc":
-                    string projectName = args[1];
-                    string rootDirectory = @"C:\codeflame\repos\" + projectName + @"\App";
+                case "add-project-mvc":
+                case "add/mvc":
+                case "project-mvc":
+                case "project/mvc":
+                case "new-project/mvc":
+                case "new/mvc":
+                case "mvc":
+                    projectName = args[1];
+                    rootDirectory = @"C:\codeflame\repos\" + projectName + @"\App";
 
                     newProject.createRootDirectory(projectName, rootDirectory);
                     break;
 
                 // [Exemplo de CMD] codeflame make:controller UsuarioController
                 case "make:controller":
+                case "m:controller":
+                case "m:c":
                     string nameController = args[1];
                     makeLayer.createController(nameController);
 
@@ -47,6 +61,8 @@ namespace codeflame
 
                 // [Exemplo de CMD] codeflame make:model UsuarioModel
                 case "make:model":
+                case "m:model":
+                case "m:m":
                     string nameModel = args[1];
                     makeLayer.createModel(nameModel);
 
@@ -56,6 +72,8 @@ namespace codeflame
 
                 // [Exemplo de CMD] codeflame make:dao UsuarioDAO
                 case "make:dao":
+                case "m:dao":
+                case "m:d":
                     string nameDAO = args[1];
                     makeLayer.createDAO(nameDAO);
 
@@ -63,6 +81,8 @@ namespace codeflame
                     break;
 
                 case "list":
+                case "cmd":
+                case "commands":
                     new SetColor().setColor("DarkMagenta");
                     Console.WriteLine("   _____                                           _               \r\n  / ____|                                         | |              \r\n | |        ___    _ __ ___     __ _   _ __     __| |   ___    ___ \r\n | |       / _ \\  | '_ ` _ \\   / _` | | '_ \\   / _` |  / _ \\  / __|\r\n | |____  | (_) | | | | | | | | (_| | | | | | | (_| | | (_) | \\__ \\\r\n  \\_____|  \\___/  |_| |_| |_|  \\__,_| |_| |_|  \\__,_|  \\___/  |___/");
                     Console.WriteLine("");
