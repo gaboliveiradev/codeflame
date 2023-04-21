@@ -83,16 +83,10 @@ namespace codeflame
                 case "list":
                 case "cmd":
                 case "commands":
-                    new SetColor().setColor("DarkMagenta");
-                    Console.WriteLine("   _____                                           _               \r\n  / ____|                                         | |              \r\n | |        ___    _ __ ___     __ _   _ __     __| |   ___    ___ \r\n | |       / _ \\  | '_ ` _ \\   / _` | | '_ \\   / _` |  / _ \\  / __|\r\n | |____  | (_) | | | | | | | | (_| | | | | | | (_| | | (_) | \\__ \\\r\n  \\_____|  \\___/  |_| |_| |_|  \\__,_| |_| |_|  \\__,_|  \\___/  |___/");
-                    Console.WriteLine("");
-                    new SetColor().setColor("Magenta");
-                    Console.WriteLine("");
-                    Console.WriteLine("codeflame add/project-mvc nome_projeto = Crie um projeto MVC em segundos.");
-                    Console.WriteLine("codeflame make:controller nome_controller = Crie um arquivo controller com todos os metodos pre-setados.");
-                    Console.WriteLine("codeflame make:model nome_model = Crie um arquivo model com todos os metodos pre-setados.");
-                    Console.WriteLine("codeflame make:dao nome_dao = Crie um arquivo dao com todos os metodos pre-setados.");
-                    Console.WriteLine("codeflame list = Liste todos os comandos disponíveis no codeflame.");
+                    new SetColor().setColor("Green");
+                    Console.WriteLine("==========================+==========================");
+                    Console.WriteLine("Acesse https://codeflame.online/commands-documentation");
+                    Console.WriteLine("==========================+==========================");
                     new SetColor().resetColor();
 
                     killProcess();
