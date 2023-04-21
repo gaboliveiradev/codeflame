@@ -53,7 +53,7 @@ namespace codeflame
                 case "make:controller":
                 case "m:controller":
                 case "m:c":
-                    string nameController = args[1];
+                    string nameController = (args[1].Length <= 10) ? args[1] + "Controller" : (args[1].Substring(args[1].Length - 10) == "Controller") ? args[1] : $"{args[1]}Controller";
                     makeLayer.createController(nameController);
 
                     killProcess();
@@ -63,7 +63,7 @@ namespace codeflame
                 case "make:model":
                 case "m:model":
                 case "m:m":
-                    string nameModel = args[1];
+                    string nameModel = (args[1].Length <= 5) ? args[1] + "Model" : (args[1].Substring(args[1].Length - 5) == "Model") ? args[1] : $"{args[1]}Model";
                     makeLayer.createModel(nameModel);
 
                     killProcess();
@@ -74,7 +74,7 @@ namespace codeflame
                 case "make:dao":
                 case "m:dao":
                 case "m:d":
-                    string nameDAO = args[1];
+                    string nameDAO = (args[1].Length <= 3) ? args[1] + "DAO" : (args[1].Substring(args[1].Length - 3) == "DAO") ? args[1] : $"{args[1]}DAO";
                     makeLayer.createDAO(nameDAO);
 
                     killProcess();
