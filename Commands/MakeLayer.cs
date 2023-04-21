@@ -22,7 +22,7 @@ namespace codeflame.Commands
             ChangeName changeName = new ChangeName();
 
             string dir_atual = Directory.GetCurrentDirectory();
-            string dir_projeto = dir_atual + @"\App\Controller\"; ;
+            string dir_projeto = (dir_atual.Substring(dir_atual.Length - 3) == "App") ? dir_atual + @"\Controller\" : dir_atual + @"\App\Controller\";
             string arquivo = dir_projeto + nameController + ".php";
             string arquivo_temporario = baseDirectory + @"Templates\Controller\Temporary.php";
 
@@ -91,7 +91,7 @@ namespace codeflame.Commands
             ChangeName changeName = new ChangeName();
 
             string dir_atual = Directory.GetCurrentDirectory();
-            string dir_projeto = dir_atual + @"\App\Model\"; ;
+            string dir_projeto = (dir_atual.Substring(dir_atual.Length - 3) == "App") ? dir_atual + @"\Model\" : dir_atual + @"\App\Model\";
             string arquivo = dir_projeto + nameModel + ".php";
             string arquivo_temporario = baseDirectory + @"Templates\Model\Temporary.php";
 
@@ -160,7 +160,7 @@ namespace codeflame.Commands
             ChangeName changeName = new ChangeName();
 
             string dir_atual = Directory.GetCurrentDirectory();
-            string dir_projeto = dir_atual + @"\App\DAO\"; ;
+            string dir_projeto = (dir_atual.Substring(dir_atual.Length - 3) == "App") ? dir_atual + @"\DAO\" : dir_atual + @"\App\DAO\";
             string arquivo = dir_projeto + nameDAO + ".php";
             string arquivo_temporario = baseDirectory + @"Templates\DAO\Temporary.php";
 
