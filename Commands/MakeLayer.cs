@@ -160,14 +160,21 @@ namespace codeflame.Commands
             ChangeName changeName = new ChangeName();
 
             string dir_atual = Directory.GetCurrentDirectory();
-            string dir_projeto = dir_atual + @"\DAO\"; ;
+            string dir_projeto = dir_atual + @"\App\DAO\"; ;
             string arquivo = dir_projeto + nameDAO + ".php";
             string arquivo_temporario = baseDirectory + @"Templates\DAO\Temporary.php";
+
+            string existDAODefault = Path.Combine(dir_projeto, "DAO.php");
 
             if (Directory.Exists(dir_projeto))
             {
                 if (!File.Exists(arquivo))
                 {
+                    if (!File.Exists(existDAODefault))
+                    {
+                        File.Copy(baseDirectory + @"Templates\MVC\DAO\" + Path.GetFileName("DAO.php"), $"{dir_projeto}" + Path.GetFileName("DAO.php"), true);
+                    }
+
                     using (StreamWriter writer = new StreamWriter(arquivo_temporario))
                     {
                         foreach (string r in changeName.dao(nameDAO))
@@ -188,7 +195,32 @@ namespace codeflame.Commands
             }
             else
             {
-                new directoryNotFound(err.prefix, err.msg_directory_not_found.Replace("CODEFLAME_FOLDER", @"...\DAO"));
+                Directory.CreateDirectory(dir_projeto);
+
+                if (!File.Exists(arquivo))
+                {
+                    if (!File.Exists(existDAODefault))
+                    {
+                        File.Copy(baseDirectory + @"Templates\MVC\DAO\" + Path.GetFileName("dao.php"), $"{dir_projeto}" + Path.GetFileName("DAO.php"), true);
+                    }
+
+                    using (StreamWriter writer = new StreamWriter(arquivo_temporario))
+                    {
+                        foreach (string r in changeName.dao(nameDAO))
+                        {
+                            writer.WriteLine(r);
+                        }
+
+                        writer.Close();
+                    }
+
+                    File.Copy(arquivo_temporario, arquivo, true);
+                    new layersCreated(succ.prefix, succ.msg_created_layer.Replace("CODEFLAME_FILE", nameDAO).Replace("CODEFLAME_DIR", arquivo));
+                }
+                else
+                {
+                    new directoryNotFound(err.prefix, err.msg_directory_not_found.Replace("CODEFLAME_FOLDER", @"...\DAO"));
+                }
             }
         }
     }
