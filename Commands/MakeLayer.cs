@@ -91,14 +91,21 @@ namespace codeflame.Commands
             ChangeName changeName = new ChangeName();
 
             string dir_atual = Directory.GetCurrentDirectory();
-            string dir_projeto = dir_atual + @"\Model\"; ;
+            string dir_projeto = dir_atual + @"\App\Model\"; ;
             string arquivo = dir_projeto + nameModel + ".php";
             string arquivo_temporario = baseDirectory + @"Templates\Model\Temporary.php";
+
+            string existModelDefault = Path.Combine(dir_projeto, "Model.php");
 
             if (Directory.Exists(dir_projeto))
             {
                 if (!File.Exists(arquivo))
                 {
+                    if (!File.Exists(existModelDefault))
+                    {
+                        File.Copy(baseDirectory + @"Templates\MVC\Model\" + Path.GetFileName("Model.php"), $"{dir_projeto}" + Path.GetFileName("Model.php"), true);
+                    }
+
                     using (StreamWriter writer = new StreamWriter(arquivo_temporario))
                     {
                         foreach (string r in changeName.model(nameModel))
@@ -119,7 +126,32 @@ namespace codeflame.Commands
             }
             else
             {
-                new directoryNotFound(err.prefix, err.msg_directory_not_found.Replace("CODEFLAME_FOLDER", @"...\Model"));
+                Directory.CreateDirectory(dir_projeto);
+
+                if (!File.Exists(arquivo))
+                {
+                    if (!File.Exists(existModelDefault))
+                    {
+                        File.Copy(baseDirectory + @"Templates\MVC\Model\" + Path.GetFileName("Model.php"), $"{dir_projeto}" + Path.GetFileName("Model.php"), true);
+                    }
+
+                    using (StreamWriter writer = new StreamWriter(arquivo_temporario))
+                    {
+                        foreach (string r in changeName.model(nameModel))
+                        {
+                            writer.WriteLine(r);
+                        }
+
+                        writer.Close();
+                    }
+
+                    File.Copy(arquivo_temporario, arquivo, true);
+                    new layersCreated(succ.prefix, succ.msg_created_layer.Replace("CODEFLAME_FILE", nameModel).Replace("CODEFLAME_DIR", arquivo));
+                }
+                else
+                {
+                    new directoryNotFound(err.prefix, err.msg_directory_not_found.Replace("CODEFLAME_FOLDER", @"...\Model"));
+                }
             }
         }
 
