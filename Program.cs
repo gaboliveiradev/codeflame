@@ -98,6 +98,11 @@ namespace codeflame
                     killProcess();
                     break;
 
+                case "--version":
+                case "--v":
+                    Console.WriteLine("v1.2.0-beta");
+                    break;
+
                 default:
                     new cmdInvalid(err.prefix, err.msg_cmd_invalid);
                     killProcess();
