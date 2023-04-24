@@ -85,7 +85,7 @@ namespace codeflame
                 case "commands":
                     new SetColor().setColor("Green");
                     Console.WriteLine("==========================+==========================");
-                    Console.WriteLine("Acesse https://codeflame.online/commands-documentation");
+                    Console.WriteLine("Acesse https://codeflame.online/commands");
                     Console.WriteLine("==========================+==========================");
                     new SetColor().resetColor();
 
