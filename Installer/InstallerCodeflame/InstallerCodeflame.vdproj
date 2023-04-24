@@ -393,6 +393,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_FCE93A21C6974DD39E2D77E4316BEE17"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FDE6093CDB524DCEBD3667AF159A5174"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -401,6 +407,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_F091724D2B0C460BA6B0376ADF5EC567"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FCE93A21C6974DD39E2D77E4316BEE17"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1755,6 +1767,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FCE93A21C6974DD39E2D77E4316BEE17"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:codeflame, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FCE93A21C6974DD39E2D77E4316BEE17"
+                    {
+                    "Name" = "8:cf.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\..\\cf.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_494264D2A74643DAB2676799C7593CD0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FDE6093CDB524DCEBD3667AF159A5174"
             {
             "SourcePath" = "8:..\\..\\bin\\Debug\\Templates\\Controller\\Controller.php"
@@ -1791,7 +1834,7 @@
             "Property" = "8:NEWPROPERTY1"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_294E049D3F7E4C3BB0870B88ED1E6A12"
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_597F61D1B71E43C48C135F1BA646314A"
                     {
                     "Name" = "8:Templates"
                     "AlwaysCreate" = "11:FALSE"
@@ -2062,25 +2105,25 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Codeflame"
-        "ProductCode" = "8:{CC969884-C54E-4855-BDD4-FA907B05EBAE}"
-        "PackageCode" = "8:{9D58509A-7425-4381-A78F-DD7B57C9ACC8}"
+        "ProductName" = "8:codeflame"
+        "ProductCode" = "8:{CD34FCB4-A8A4-47CC-9046-5031C5D79FEF}"
+        "PackageCode" = "8:{DEF9F839-DA1D-41E2-A9FB-8BCD4A7507F5}"
         "UpgradeCode" = "8:{CA0A9612-B779-4D7C-BDD5-E9811B639D75}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.1.0"
-        "Manufacturer" = "8:Codeflame INC"
+        "ProductVersion" = "8:v1.2.0-beta"
+        "Manufacturer" = "8:codeflame inc"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Intalador Codeflame"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Gabriel Oliveira"
+        "ARPCONTACT" = "8:Developer Oliveira, Gabriel"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
-        "ARPURLINFOABOUT" = "8:www.codeflame.com.br"
+        "ARPURLINFOABOUT" = "8:https://codeflame.online"
         "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
