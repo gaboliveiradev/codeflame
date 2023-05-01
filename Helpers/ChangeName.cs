@@ -33,7 +33,7 @@ namespace codeflame.Helpers
             return rowsFile;
         }
 
-        public string[] model(string name) 
+        public string[] model(string name, string[] arr_props = null) 
         {
             string line; var qtdRows = File.ReadLines(baseDirectory + @"Templates\Model\Model.php").Count();
             string[] rowsFile = new string[qtdRows]; int i = 0;
@@ -44,6 +44,18 @@ namespace codeflame.Helpers
             {
                 rowsFile[i] = line;
                 i++;
+            }
+
+            if (arr_props != null)
+            {
+                string conj_props = "";
+
+                foreach (string p in arr_props)
+                {
+                    conj_props += $", ${p}";
+                }
+
+                rowsFile[4] = $"    public $id{conj_props};";
             }
 
             rowsFile[3] = (rowsFile[3] == m) ? $"class {name} extends Model {{" : "class NOME_MODEL extends Model {";

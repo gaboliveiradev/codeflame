@@ -86,7 +86,7 @@ namespace codeflame.Commands
             }
         }
 
-        public void createModel(string nameModel)
+        public void createModel(string nameModel, string[] arr_props = null)
         {
             ChangeName changeName = new ChangeName();
 
@@ -108,7 +108,7 @@ namespace codeflame.Commands
 
                     using (StreamWriter writer = new StreamWriter(arquivo_temporario))
                     {
-                        foreach (string r in changeName.model(nameModel))
+                        foreach (string r in changeName.model(nameModel, arr_props))
                         {
                             writer.WriteLine(r);
                         }
@@ -137,7 +137,7 @@ namespace codeflame.Commands
 
                     using (StreamWriter writer = new StreamWriter(arquivo_temporario))
                     {
-                        foreach (string r in changeName.model(nameModel))
+                        foreach (string r in changeName.model(nameModel, arr_props))
                         {
                             writer.WriteLine(r);
                         }

@@ -21,6 +21,12 @@ namespace codeflame
             Process.GetCurrentProcess().Kill();
         }
 
+        static string[] convertStringInArray(string s)
+        {
+            string[] arr_props = s.Split(',');
+            return arr_props;
+        }
+
         static void Main(string[] args)
         {
             NewProject newProject = new NewProject();
@@ -59,12 +65,20 @@ namespace codeflame
                     killProcess();
                     break;
 
-                // [Exemplo de CMD] codeflame make:model UsuarioModel
+                // [Exemplo de CMD] codeflame make:model UsuarioModel --props nome,email
                 case "make:model":
                 case "m:model":
                 case "m:m":
                     string nameModel = (args[1].Length <= 5) ? args[1] + "Model" : (args[1].Substring(args[1].Length - 5) == "Model") ? args[1] : $"{args[1]}Model";
-                    makeLayer.createModel(nameModel);
+
+                    if (Array.IndexOf(args, "--props") != -1)
+                    {
+                        makeLayer.createModel(nameModel, convertStringInArray(args[3]));
+                    }
+                    else
+                    {
+                        makeLayer.createModel(nameModel);
+                    }
 
                     killProcess();
                     break;
