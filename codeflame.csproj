@@ -176,10 +176,15 @@
     <EmbeddedResource Include="Templates\DAO\Temporary.php">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Templates\MVC\Services\Check\CPFCheck.php">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Templates\MVC\Services\Check\CNPJCheck.php">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Templates\MVC\Migration\" />
-    <Folder Include="Templates\MVC\Provider\" />
+    <Folder Include="Templates\MVC\Services\Migration\" />
     <Folder Include="Templates\MVC\View\assets\" />
   </ItemGroup>
   <ItemGroup>
