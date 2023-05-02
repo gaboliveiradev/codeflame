@@ -48,7 +48,7 @@ namespace codeflame.Commands
             string[] folders = { 
                 @"\Controller", @"\DAO", @"\Model", @"\View", @"\View\assets", @"\View\bootstrap",
                 @"\View\bootstrap\css", @"\View\bootstrap\js", @"\View\css", @"\View\css\welcome", 
-                @"\View\includes", @"\View\modules\welcome", @"\Services\Check", @"\Services\Migration",
+                @"\View\includes", @"\View\modules\welcome", @"\vendor\codeflame\Check",
             };
 
             foreach(string f in folders)

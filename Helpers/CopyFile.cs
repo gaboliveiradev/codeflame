@@ -27,7 +27,7 @@ namespace codeflame.Helpers
                 string[] controllerFiles = Directory.GetFiles(baseDirectory + @"Templates\MVC\Controller");
                 string[] modelFiles = Directory.GetFiles(baseDirectory + @"Templates\MVC\Model");
                 string[] daoFiles = Directory.GetFiles(baseDirectory + @"Templates\MVC\DAO");
-                string[] servicesCheckFiles = Directory.GetFiles(baseDirectory + @"Templates\MVC\Services\Check");
+                string[] vendorCheckFiles = Directory.GetFiles(baseDirectory + @"Templates\MVC\vendor\codeflame\Check");
 
                 Console.WriteLine("");
                 new fileTransferStarted(succ.prefix, succ.msg_file_transfer_started.Replace("CODEFLAME_TYPE_FILE", "RAIZ"), colorTitle);
@@ -98,10 +98,10 @@ namespace codeflame.Helpers
                 }
 
                 Console.WriteLine("");
-                new fileTransferStarted(succ.prefix, succ.msg_file_transfer_started.Replace("CODEFLAME_TYPE_FILE", @"SERVICES\CHECK"), colorTitle);
-                foreach (string f in servicesCheckFiles)
+                new fileTransferStarted(succ.prefix, succ.msg_file_transfer_started.Replace("CODEFLAME_TYPE_FILE", @"VENDOR\CODEFLAME\CHECK"), colorTitle);
+                foreach (string f in vendorCheckFiles)
                 {
-                    File.Copy(baseDirectory + @"Templates\MVC\Services\Check\" + Path.GetFileName(f), $"{rootDirectory}" + @"\Services\Check\" + Path.GetFileName(f), true);
+                    File.Copy(baseDirectory + @"Templates\MVC\vendor\codeflame\Check\" + Path.GetFileName(f), $"{rootDirectory}" + @"\vendor\codeflame\Check\" + Path.GetFileName(f), true);
                     new copiedFile(succ.prefix, succ.msg_copied_file.Replace("CODEFLAME_FILE", Path.GetFileName(f)), colorMsg);
                 }
 

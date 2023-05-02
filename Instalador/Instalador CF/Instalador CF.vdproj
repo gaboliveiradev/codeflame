@@ -21,12 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_0214E4DDAC7240CAB3305F3E3F7523C4"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_045AF9CB85EC46339B17074F4B6F76FC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -177,12 +171,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_62C440C2D09448EAA0A02FF7D27F3CB8"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_701AB4E0F35F485BBA77651B8EC867F1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -225,12 +213,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_860247C173287FBA5527142D9B817AE0"
-        "OwnerKey" = "8:_9474BB99A52F42A8A87D41222CF389CA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_888F1EE2A18744D7A1B8829F7513C1D1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -256,6 +238,12 @@
         "Entry"
         {
         "MsmKey" = "8:_92BA5B062D9F4DD192A6B0735C98CEDF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_92C2DE7B96FF4EC390F63D9065211D16"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -321,12 +309,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C6DCB618AA1E4094B50DC16CD1903DC9"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_D03958892E2F43E3B09E83426DAED090"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -341,6 +323,12 @@
         {
         "MsmKey" = "8:_D7CB85E9E6224789916F1119CC6AC32B"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D8F41B22352C652255C659028C91DC93"
+        "OwnerKey" = "8:_9474BB99A52F42A8A87D41222CF389CA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -387,6 +375,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E33956F087324465A08D6DD2CC31F3B4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E8E118172BD343439B08C558E041E0EF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -418,19 +412,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_860247C173287FBA5527142D9B817AE0"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_62C440C2D09448EAA0A02FF7D27F3CB8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_9474BB99A52F42A8A87D41222CF389CA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_92C2DE7B96FF4EC390F63D9065211D16"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_D8F41B22352C652255C659028C91DC93"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -451,6 +445,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -467,6 +477,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -502,26 +520,6 @@
             "TargetName" = "8:bootstrap.js"
             "Tag" = "8:"
             "Folder" = "8:_A4388C20B0E74E449D4C58CAF3886B5A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0214E4DDAC7240CAB3305F3E3F7523C4"
-            {
-            "SourcePath" = "8:..\\..\\Templates\\MVC\\Services\\Check\\CNPJCheck.php"
-            "TargetName" = "8:CNPJCheck.php"
-            "Tag" = "8:"
-            "Folder" = "8:_033D6BEEBC764ECABF5E7FA715505983"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1036,37 +1034,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_62C440C2D09448EAA0A02FF7D27F3CB8"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:codeflame, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_62C440C2D09448EAA0A02FF7D27F3CB8"
-                    {
-                    "Name" = "8:cf.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\cf.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_378D83822FF64EB6A076FE3541437AEE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_701AB4E0F35F485BBA77651B8EC867F1"
             {
             "SourcePath" = "8:..\\..\\Templates\\MVC\\View\\bootstrap\\css\\bootstrap-reboot.min.css.map"
@@ -1207,37 +1174,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_860247C173287FBA5527142D9B817AE0"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
-                "ScatterAssemblies"
-                {
-                    "_860247C173287FBA5527142D9B817AE0"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:System.Net.Http.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_378D83822FF64EB6A076FE3541437AEE"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_888F1EE2A18744D7A1B8829F7513C1D1"
             {
             "SourcePath" = "8:..\\..\\Templates\\MVC\\View\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
@@ -1324,6 +1260,37 @@
             "TargetName" = "8:js_config.php"
             "Tag" = "8:"
             "Folder" = "8:_63EF00912C71446D8FD42DFA500266BE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_92C2DE7B96FF4EC390F63D9065211D16"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:codeflame, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_92C2DE7B96FF4EC390F63D9065211D16"
+                    {
+                    "Name" = "8:cf.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\..\\..\\..\\..\\Desktop\\cf.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_378D83822FF64EB6A076FE3541437AEE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -1518,26 +1485,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C6DCB618AA1E4094B50DC16CD1903DC9"
-            {
-            "SourcePath" = "8:..\\..\\Templates\\MVC\\Services\\Check\\CPFCheck.php"
-            "TargetName" = "8:CPFCheck.php"
-            "Tag" = "8:"
-            "Folder" = "8:_033D6BEEBC764ECABF5E7FA715505983"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D03958892E2F43E3B09E83426DAED090"
             {
             "SourcePath" = "8:..\\..\\Templates\\Model\\Model.php"
@@ -1596,6 +1543,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D8F41B22352C652255C659028C91DC93"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_D8F41B22352C652255C659028C91DC93"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_378D83822FF64EB6A076FE3541437AEE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D97B2FB0546B46A3A207B14C99EF29CF"
@@ -1724,6 +1702,26 @@
             "TargetName" = "8:bootstrap-grid.min.css"
             "Tag" = "8:"
             "Folder" = "8:_C20AF54DAB6D49AEB8ACC2A67F4F7ADC"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E33956F087324465A08D6DD2CC31F3B4"
+            {
+            "SourcePath" = "8:..\\..\\Templates\\MVC\\vendor\\codeflame\\Check\\CPFCheck.php"
+            "TargetName" = "8:CPFCheck.php"
+            "Tag" = "8:"
+            "Folder" = "8:_5419CF828B4B431A88AFA13270BABB02"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2026,35 +2024,35 @@
                                             }
                                         }
                                     }
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_B39E3C6EECEF45649B7A8A1FA28873AB"
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_8E494F14A29245EF99224C26D5C0681C"
                                     {
-                                    "Name" = "8:Services"
+                                    "Name" = "8:vendor"
                                     "AlwaysCreate" = "11:FALSE"
                                     "Condition" = "8:"
                                     "Transitive" = "11:FALSE"
-                                    "Property" = "8:_D29C30549931401A89BBE09BC1449CB5"
+                                    "Property" = "8:_6646FC9C10604BC6AA89A987B9689859"
                                         "Folders"
                                         {
-                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_033D6BEEBC764ECABF5E7FA715505983"
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_35C4C1567CC24C9397435527991D0AFB"
                                             {
-                                            "Name" = "8:Check"
+                                            "Name" = "8:codeflame"
                                             "AlwaysCreate" = "11:FALSE"
                                             "Condition" = "8:"
                                             "Transitive" = "11:FALSE"
-                                            "Property" = "8:_8562E76F57E049E2A937B8CDB5E92B53"
+                                            "Property" = "8:_9EA359D73B71464BB3B9345C8472345F"
                                                 "Folders"
                                                 {
-                                                }
-                                            }
-                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_F6C6DF32721A49B3B358F320922DBAF0"
-                                            {
-                                            "Name" = "8:Migration"
-                                            "AlwaysCreate" = "11:FALSE"
-                                            "Condition" = "8:"
-                                            "Transitive" = "11:FALSE"
-                                            "Property" = "8:_3C43B345AB704D80A088259BE04A6055"
-                                                "Folders"
-                                                {
+                                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5419CF828B4B431A88AFA13270BABB02"
+                                                    {
+                                                    "Name" = "8:Check"
+                                                    "AlwaysCreate" = "11:FALSE"
+                                                    "Condition" = "8:"
+                                                    "Transitive" = "11:FALSE"
+                                                    "Property" = "8:_64B1F24C92CC46889E822C47ADDFF441"
+                                                        "Folders"
+                                                        {
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
@@ -2126,7 +2124,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:codeflame-v1.2.0-beta"
         "ProductCode" = "8:{0162F8E2-14C1-44C8-A21B-F3C636CAD944}"
-        "PackageCode" = "8:{A43F7C6B-5767-481D-B7F8-D8841D368323}"
+        "PackageCode" = "8:{B2EAB52A-CFAD-4471-AD92-66F34F9903A4}"
         "UpgradeCode" = "8:{46F5C1C7-A6F2-4266-9BAC-9B53DAF567A4}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"

@@ -1,5 +1,5 @@
 <?php
-namespace App\Services\Check;
+namespace App\vendor\codeflame\Check;
 
 class CPFCheck {
 
